@@ -20,8 +20,7 @@ The focus of this project is to understand **core data engineering concepts** su
 
 ## 🔄 Data Pipeline Flow
 
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/d5b5c30b-93e2-4de0-a146-e87265a5f01a" />
-
+<img width="800" height="1000" alt="image" src="https://github.com/user-attachments/assets/d4144a7c-f278-4489-8ebe-64c2d5f95fd7" />
 
 ### 1️⃣ Data Ingestion (Azure Data Factory)
 - Ingests sales data from CSV files
