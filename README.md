@@ -122,6 +122,6 @@ https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows
 ---
 
 ## 👤 Author
-**Tanvi Nevagi Siddhesh Gawde*  
+**Tanvi Nevagi Siddhesh Gawde**  
 Aspiring Data Engineer | Python | SQL | Azure | Power BI
 
