@@ -1,132 +1,127 @@
-# 🚀 Azure Batch Data Pipeline (Beginner Project)
+# 🚀 Azure End-to-End Data Engineering Project (Amazon Prime Analytics)
 
 ## 📌 Project Overview
-This project demonstrates a **beginner-friendly end-to-end Azure Data Engineering pipeline** that ingests raw sales data, processes it using best practices, and delivers business insights through **Power BI**.
+This project demonstrates an **end-to-end Azure Data Engineering pipeline** that ingests raw data from an HTTP source, processes it using Azure Databricks, organizes it using **Medallion Architecture**, and delivers insights through **Power BI dashboards**.
 
-The focus of this project is to understand **core data engineering concepts** such as batch ingestion, data cleaning, aggregation, and analytics — without overengineering.
+The goal of this project is to understand and implement **core data engineering concepts** using Azure services in a simple, beginner-friendly manner.
 
 ---
 
 ## 🏗️ Architecture Overview
 
-**Tools Used**
-- Azure Data Factory (Data Ingestion)
-- Azure Data Lake Storage Gen2 (Data Storage)
-- Azure Databricks (Data Transformation)
-- Power BI Desktop (Data Visualization)
+### Technologies Used
+- **Azure Data Factory** – Data ingestion from HTTP source
+- **Azure Data Lake Storage Gen2** – Data storage (Bronze, Silver, Gold)
+- **Azure Databricks** – Data cleaning and transformations using PySpark
+- **Power BI Desktop** – Data visualization and reporting
 
 ---
 
-
 ## 🔄 Data Pipeline Flow
 
-<img width="300" height="500" alt="image" src="https://github.com/user-attachments/assets/d4144a7c-f278-4489-8ebe-64c2d5f95fd7" />
-
 ### 1️⃣ Data Ingestion (Azure Data Factory)
-- Ingests sales data from CSV files
-- Uses Copy Activity
-- Manually triggered batch pipeline
+- Data is ingested from an HTTP endpoint
+- Uses **Copy Activity**
+- No transformations during ingestion
+- Raw data is stored in Azure Data Lake
+
+---
 
 ### 2️⃣ Bronze Layer (Raw Data)
-- Stores raw CSV data as received
-- No transformations applied
+- Stores raw CSV data exactly as received
 - Append-only storage
+- Acts as a backup and source of truth
 
-### 3️⃣ Silver Layer (Clean Data)
-- Removes duplicate records
-- Handles null values
-- Standardizes column names
-- Stores cleaned data in Parquet format
+---
 
-### 4️⃣ Gold Layer (Analytics Data)
-- Aggregates sales data by:
-  - Date
-  - Product
-  - Region
-- Creates analytics-ready datasets for reporting
+### 3️⃣ Data Transformation (Azure Databricks)
+Using PySpark, the following operations are performed:
+- Schema standardization
+- Handling null values
+- Data type corrections
+- Basic data cleaning
 
-### 5️⃣ Visualization (Power BI)
-- Connects to Gold layer data
-- Interactive dashboards showing:
-  - Sales trends
-  - Top products
-  - Regional performance
+---
+
+### 4️⃣ Silver Layer (Clean Data)
+- Cleaned and structured data
+- Stored in optimized Parquet format
+- Ready for analytical processing
+
+---
+
+### 5️⃣ Gold Layer (Business Data)
+- Aggregated and analytics-ready data
+- Optimized for reporting and visualization
+- Examples:
+  - Movies and TV shows by year
+  - Content distribution by country
+  - Genre-wise analysis
+
+---
+
+### 6️⃣ Visualization (Power BI)
+- Power BI connects to Gold layer data
+- Interactive dashboards created to analyze:
+  - Content trends
+  - Release patterns
+  - Country-wise distribution
 
 ---
 
 ## 🧱 Medallion Architecture Used
 
-| Layer | Purpose |
-|------|--------|
+| Layer | Description |
+|------|------------|
 | Bronze | Raw, unprocessed data |
-| Silver | Cleaned and validated data |
+| Silver | Cleaned and structured data |
 | Gold | Aggregated, business-ready data |
 
 ---
 
-## 📊 Power BI Dashboard
-The dashboard provides:
-- Total sales over time
-- Sales by product and region
-- Filterable and interactive visuals
+## 📁 Project Structure
 
----
-
-## 📁 Project Folder Structure
-
-azure-batch-data-pipeline/
-│
-├── data/
-│ ├── bronze/
-│ ├── silver/
-│ └── gold/
-│
-├── adf/
-│ └── pipelines/
-│
-├── databricks/
-│ └── notebooks/
-│
-├── powerbi/
-│ └── dashboards/
-│
-├── diagrams/
-│ └── architecture.png
-│
-└── README.md
+<img width="247" height="609" alt="image" src="https://github.com/user-attachments/assets/da51cfcd-390b-4f79-b131-1d63f759ed4a" />
 
 
 ---
 
 ## ⚙️ Key Concepts Demonstrated
-- Batch Data Ingestion
-- Azure Data Lake Gen2
-- Medallion Architecture
-- Data Cleaning & Deduplication
-- Data Aggregation
-- Star-schema-ready analytics
-- Power BI Reporting
+- ETL Pipeline Design
+- Azure Data Factory Copy Activity
+- Azure Data Lake Storage Gen2
+- Azure Databricks with PySpark
+- Medallion Architecture (Bronze / Silver / Gold)
+- Batch Data Processing
+- Power BI Data Visualization
 
 ---
 
 ## 🚀 How to Run This Project
-1. Upload CSV dataset to Azure Data Lake (Bronze)
-2. Run Azure Data Factory pipeline
-3. Execute Databricks notebooks:
-   - Bronze → Silver
-   - Silver → Gold
-4. Open Power BI dashboard using Power BI Desktop
+1. Ingest data using Azure Data Factory
+2. Store raw data in Bronze layer
+3. Run Databricks notebooks to generate Silver and Gold layers
+4. Connect Power BI to Gold layer data
+5. Build dashboards and insights
 
 ---
 
 ## 🎯 Learning Outcome
-This project helped me understand:
-- How real-world batch data pipelines work
-- How to structure data using medallion architecture
-- How data engineers support analytics teams
+Through this project, I gained hands-on experience in:
+- Designing Azure-based data pipelines
+- Processing data using PySpark
+- Organizing data for analytics
+- Building BI dashboards using Power BI
 
 ---
 
-## 📌 Author
-**Tanvi Nevagi  Siddhesh Gawde**  
+## 📌 Dataset Source
+Amazon Prime Movies and TV Shows Dataset  
+https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows
+
+---
+
+## 👤 Author
+**Tanvi Nevagi Siddhesh Gawde*  
 Aspiring Data Engineer | Python | SQL | Azure | Power BI
+
