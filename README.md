@@ -69,12 +69,6 @@ Using PySpark, the following operations are performed:
 
 ---
 
-## 📁 Project Structure
-
-<img width="247" height="609" alt="image" src="https://github.com/user-attachments/assets/da51cfcd-390b-4f79-b131-1d63f759ed4a" />
-
----
-
 ## ⚙️ Key Data Engineering Concepts Demonstrated
 - ETL Pipeline Design
 - Azure Data Factory Copy Activity
