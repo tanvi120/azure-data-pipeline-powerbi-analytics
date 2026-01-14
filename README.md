@@ -1,19 +1,18 @@
 # 🚀 Azure End-to-End Data Engineering Project (Amazon Prime Analytics)
 
 ## 📌 Project Overview
-This project demonstrates an **end-to-end Azure Data Engineering pipeline** that ingests raw data from an HTTP source, processes it using Azure Databricks, organizes it using **Medallion Architecture**, and delivers insights through **Power BI dashboards**.
+This project demonstrates an **end-to-end Azure Data Engineering pipeline** that ingests raw data from an HTTP source, processes it using Azure Databricks, and organizes it using **Medallion Architecture** in Azure Data Lake Storage Gen2.
 
-The goal of this project is to understand and implement **core data engineering concepts** using Azure services in a simple, beginner-friendly manner.
+The goal of this project is to understand and implement **core data engineering concepts** such as batch ingestion, distributed data processing, data cleansing, and data modeling using Azure services in a beginner-friendly and production-oriented manner.
 
 ---
 
 ## 🏗️ Architecture Overview
 
 ### Technologies Used
-- **Azure Data Factory** – Data ingestion from HTTP source
-- **Azure Data Lake Storage Gen2** – Data storage (Bronze, Silver, Gold)
-- **Azure Databricks** – Data cleaning and transformations using PySpark
-- **Power BI Desktop** – Data visualization and reporting
+- **Azure Data Factory** – Data ingestion from HTTP source  
+- **Azure Data Lake Storage Gen2** – Data storage (Bronze, Silver, Gold)  
+- **Azure Databricks** – Data cleaning and transformations using PySpark  
 
 ---
 
@@ -45,27 +44,18 @@ Using PySpark, the following operations are performed:
 
 ### 4️⃣ Silver Layer (Clean Data)
 - Cleaned and structured data
-- Stored in optimized Parquet format
+- Stored in optimized Parquet / Delta format
 - Ready for analytical processing
 
 ---
 
 ### 5️⃣ Gold Layer (Business Data)
 - Aggregated and analytics-ready data
-- Optimized for reporting and visualization
+- Optimized for downstream consumption
 - Examples:
   - Movies and TV shows by year
   - Content distribution by country
   - Genre-wise analysis
-
----
-
-### 6️⃣ Visualization (Power BI)
-- Power BI connects to Gold layer data
-- Interactive dashboards created to analyze:
-  - Content trends
-  - Release patterns
-  - Country-wise distribution
 
 ---
 
@@ -83,17 +73,16 @@ Using PySpark, the following operations are performed:
 
 <img width="247" height="609" alt="image" src="https://github.com/user-attachments/assets/da51cfcd-390b-4f79-b131-1d63f759ed4a" />
 
-
 ---
 
-## ⚙️ Key Concepts Demonstrated
+## ⚙️ Key Data Engineering Concepts Demonstrated
 - ETL Pipeline Design
 - Azure Data Factory Copy Activity
 - Azure Data Lake Storage Gen2
 - Azure Databricks with PySpark
 - Medallion Architecture (Bronze / Silver / Gold)
 - Batch Data Processing
-- Power BI Data Visualization
+- Distributed Data Transformations
 
 ---
 
@@ -101,17 +90,16 @@ Using PySpark, the following operations are performed:
 1. Ingest data using Azure Data Factory
 2. Store raw data in Bronze layer
 3. Run Databricks notebooks to generate Silver and Gold layers
-4. Connect Power BI to Gold layer data
-5. Build dashboards and insights
+4. Validate data consistency and record counts across layers
 
 ---
 
 ## 🎯 Learning Outcome
 Through this project, I gained hands-on experience in:
-- Designing Azure-based data pipelines
-- Processing data using PySpark
-- Organizing data for analytics
-- Building BI dashboards using Power BI
+- Designing Azure-based batch data pipelines
+- Processing large datasets using PySpark
+- Implementing Medallion Architecture
+- Organizing data for analytical consumption
 
 ---
 
@@ -122,6 +110,5 @@ https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows
 ---
 
 ## 👤 Author
-**Tanvi Nevagi Siddhesh Gawde**  
-Aspiring Data Engineer | Python | SQL | Azure | Power BI
-
+**Tanvi Nevagi**  
+Aspiring Data Engineer | Python | SQL | Azure | Databricks
